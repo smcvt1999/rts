@@ -63,7 +63,7 @@ window.addEventListener('unhandledrejection', (event) => {
 });
 
 try {
-  new Phaser.Game(config);
+  window.__rts = new Phaser.Game(config);
 } catch (error) {
   showFatalError(error);
 }
