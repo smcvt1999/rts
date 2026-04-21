@@ -63,6 +63,7 @@ window.addEventListener('unhandledrejection', (event) => {
 });
 
 try {
+  // Exposed for debugging — testers can open devtools and inspect game state.
   window.__rts = new Phaser.Game(config);
 } catch (error) {
   showFatalError(error);
