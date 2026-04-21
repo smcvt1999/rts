@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+*.log
+.vscode/
+.idea/
+.playwright-mcp/
+*.local
+*.tmp
+spectate-*.png
+lobby-*.png
+# Source archives — runtime uses extracted PNGs, no need to ship raw zips
+assets/*.zip
+assets/**/*.zip
+# Aseprite source art — not used at runtime
+*.aseprite
