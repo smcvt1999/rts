@@ -197,14 +197,14 @@ export default class SelectionSystem {
 
   drawDrag(pointer) {
     this.graphics.clear();
-    const fillColor = 0xc5d9ff;
     const x = Math.min(this.startScreen.x, pointer.x);
     const y = Math.min(this.startScreen.y, pointer.y);
     const width = Math.abs(pointer.x - this.startScreen.x);
     const height = Math.abs(pointer.y - this.startScreen.y);
-    this.graphics.lineStyle(2, fillColor, 0.95);
-    this.graphics.fillStyle(fillColor, 0.08);
+    // SC-style: green fill + thicker bright border so it stays readable on grass.
+    this.graphics.fillStyle(0x6eff8a, 0.18);
     this.graphics.fillRect(x, y, width, height);
+    this.graphics.lineStyle(2, 0x6eff8a, 1.0);
     this.graphics.strokeRect(x, y, width, height);
   }
 
