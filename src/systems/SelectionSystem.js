@@ -9,7 +9,9 @@ export default class SelectionSystem {
     this.startScreen = null;
     this.startWorld = null;
     this.pointerButton = 0;
-    this.graphics = scene.add.graphics().setScrollFactor(0).setDepth(2500);
+    // Depth >= 10000 + scrollFactor 0 → rendered by uiCamera (zoom-independent),
+    // so drag rectangle always matches pointer coords even when game camera is zoomed.
+    this.graphics = scene.add.graphics().setScrollFactor(0).setDepth(11000);
   }
 
   setActive(active) {
